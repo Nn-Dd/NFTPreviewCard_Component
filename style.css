@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+/* - Soft blue: hsl(215, 51%, 70%)
+- Cyan: hsl(178, 100%, 50%)
+
+### Neutral
+
+- Very dark blue (main BG): hsl(217, 54%, 11%)
+- Very dark blue (card BG): hsl(216, 50%, 16%)
+- Very dark blue (line): hsl(215, 32%, 27%)
+- White: hsl(0, 0%, 100%) */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  background-color: hsl(217, 54%, 11%);
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  word-spacing: 0.1rem;
+}
+.card {
+  max-width: 350px;
+  background-color: hsl(216, 50%, 16%);
+  -webkit-box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem;
+  border-radius: 0.625rem;
+}
+
+.card picture img {
+  display: block;
+  width: 100%;
+  border-radius: 0.625rem;
+  margin: 0 auto 1.5rem;
+}
+.card .text h1 {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.card .text p {
+  color: hsl(215, 51%, 70%);
+  font-weight: 300;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+.card .nft-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.card .nft-info .left,
+.right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card .nft-info .left h3 {
+  color: hsl(178, 100%, 50%);
+  font-size: 0.8rem;
+}
+
+.card .nft-info .right h3 {
+  color: hsl(215, 51%, 70%);
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.card .solid {
+  border-top: 1px solid hsl(215, 32%, 27%);
+  border-bottom: 1rem;
+}
+.card .user-info {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5%;
+  color: hsl(215, 51%, 70%);
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+.card .user-info img {
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 40px;
+}
+.card .user-info .username {
+  color: #fff;
+}
+.attribution {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #fff;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
