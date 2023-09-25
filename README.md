@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshots/active-states.png)
+![](./screenshots/desktop.png)
 ![](./screenshots/active-states.png)
 
 
