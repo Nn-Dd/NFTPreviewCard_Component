@@ -1,15 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
 
-/* - Soft blue: hsl(215, 51%, 70%)
-- Cyan: hsl(178, 100%, 50%)
-
-### Neutral
-
-- Very dark blue (main BG): hsl(217, 54%, 11%)
-- Very dark blue (card BG): hsl(216, 50%, 16%)
-- Very dark blue (line): hsl(215, 32%, 27%)
-- White: hsl(0, 0%, 100%) */
-
 * {
   margin: 0;
   padding: 0;
@@ -38,18 +28,70 @@ body {
   border-radius: 0.625rem;
 }
 
+.card {
+  position: relative;
+}
+
+.card .image {
+  position: relative;
+}
+
 .card picture img {
   display: block;
   width: 100%;
   border-radius: 0.625rem;
   margin: 0 auto 1.5rem;
+  background: none;
+  transition: 0.3s ease-in;
+  cursor: pointer;
 }
+
+.card picture .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+  background-color: rgb(0, 255, 247, 0.25);
+  cursor: pointer;
+  border-radius: 0.625rem;
+}
+.card .image:hover .overlay {
+  opacity: 1;
+}
+
+.card .image .icon {
+  width: 50px;
+  color: white;
+  font-size: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+.card .image .icon:hover {
+  color: #eee;
+}
+
 .card .text h1 {
   color: hsl(0, 0%, 100%);
   font-weight: 600;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in;
 }
+.card .text h1:hover {
+  color: rgb(0, 255, 247);
+  transition: 0.3s ease-out;
+}
+
 .card .text p {
   color: hsl(215, 51%, 70%);
   font-weight: 300;
@@ -101,6 +143,12 @@ body {
 }
 .card .user-info .username {
   color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+.card .user-info .username:hover {
+  color: hsl(178, 100%, 50%);
+  transition: 0.3s ease-out;
 }
 .attribution {
   font-size: 12px;
